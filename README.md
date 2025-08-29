@@ -3,7 +3,7 @@
 
 This project creates a Harry Potter-style invisibility cloak using Python and OpenCV. A green cloth is detected in the webcam feed and replaced with the background, making it look invisible.
 
-🚀 How it Works
+#🚀 How it Works
 
 Capture background without cloak
 
@@ -15,7 +15,7 @@ Replace cloak pixels with background
 
 Display final output in real-time
 
-▶️ Run the Project
+#▶️ Run the Project
 
 Install dependencies:
 
@@ -31,7 +31,7 @@ ESC → Exit
 
 b → Recapture background
 
-✨ Key Code Steps
+#✨ Key Code Steps
 
 pythoncap = cv2.VideoCapture(0)  # Open webcam
 
@@ -47,7 +47,7 @@ rest = cv2.bitwise_and(frame, frame, mask=cv2.bitwise_not(mask))
 
 final = cv2.addWeighted(cloak, 1, rest, 1, 0)  # Merge
 
-🎨 Color Detection
+#🎨 Color Detection
 
 The green cloak is detected using HSV color ranges:
 
@@ -55,13 +55,13 @@ Lower Green: [40, 50, 50] - captures yellowish-green
 
 Upper Green: [80, 255, 255] - extends to bluish-green
 
-📸 Example
+#📸 Example
 
 Without cloak → background captured
 
 With green cloak → cloak disappears, background shows through
 
-💡 Tips
+#💡 Tips
 
 Use a bright green fabric for best detection
 
